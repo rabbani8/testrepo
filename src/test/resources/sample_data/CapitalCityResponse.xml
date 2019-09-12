@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:CapitalCityResponse xmlns:ns0="http://www.oorsprong.org/websamples.countryinfo">
+  <ns0:CapitalCityResult>New=india</ns0:CapitalCityResult>
+</ns0:CapitalCityResponse>

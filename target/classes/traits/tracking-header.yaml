@@ -1,0 +1,44 @@
+headers:
+  applicationId:        
+    description: | 
+      The ID of the application within the corporate entity from which this message originated.
+    required: true
+    example: AID
+    maxLength: 255
+  applicationUserId:
+    description: | 
+      The ID of the user of the application within the corporate entity from which the message originated.
+        If not provided, applicationId value will be used.
+    required: false
+    example: proc
+    maxLength: 255
+  consumerId:
+    description: | 
+      The environment from which this message originated.
+    required: true
+    example: RTB1
+    maxLength: 255
+  messageId:
+    description: | 
+      A unique identifier for this message, to enable tracking, reporting, and correlation.
+    required: true
+    example: a28f6a0d
+    maxLength: 255
+  enterpriseMessageId:
+    description: | 
+      applicationId + messageId.
+    required: true
+    example: 7V2a28f6a0d
+    maxLength: 255
+  messageDateTimeStamp: 
+    description: | 
+      The dateTimeStamp of when the message was created. This can be used for tracking and reporting and also by the consuming application to determine if the message is stale. Timestamp should be in GMT TZ when the caller is unable to format with timezone and offset.
+    required: true
+    type: string
+    example: 2016-10-31T10:22:56
+  locale:
+    description: | 
+      locale for identifying localization (region).
+    required: false
+    example: en
+    maxLength: 2

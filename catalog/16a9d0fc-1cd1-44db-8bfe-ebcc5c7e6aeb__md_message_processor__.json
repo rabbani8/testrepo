@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {}
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer",
+            "typeId": "CountryCurrencyResponse"
+        }
+    },
+    "id": "16a9d0fc-1cd1-44db-8bfe-ebcc5c7e6aeb",
+    "version": "5.2.0.0"
+}

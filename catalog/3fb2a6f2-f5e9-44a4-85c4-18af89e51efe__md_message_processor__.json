@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {}
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer",
+            "typeId": "CapitalCityResponse"
+        }
+    },
+    "id": "3fb2a6f2-f5e9-44a4-85c4-18af89e51efe",
+    "version": "5.2.0.0"
+}

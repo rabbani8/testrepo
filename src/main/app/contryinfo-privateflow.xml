@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+
+  
+    
+  <!--   <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration" basePath="/systems"/> -->
+    
+    
+    
+    <flow name="pf-capital-city">
+        
+        <dw:transform-message doc:name="capitalCity RequestTransformer">
+            <dw:input-inbound-property doc:sample="sample_data\map_string_string_1.dwl" propertyName="http.uri.params"/>
+            <dw:set-payload resource="classpath:dwScripts/capitalCityRequestTransformer.dwl"/>
+        </dw:transform-message>
+        
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CapitalCity" doc:name="CountryInfoService-capital-city-Web Service Consumer"/>
+        <dw:transform-message doc:name="capitalCity ResponseTransformer">
+            <dw:input-payload doc:sample="sample_data\empty.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/capitalCityResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+
+     <flow name="pf-countryCurrency">
+        <dw:transform-message doc:name="countryCurrencyRequestTransformer">
+            <dw:input-inbound-property propertyName="http.query.params"/>
+            <dw:set-payload resource="classpath:dwScripts/countryCurrencyRequestTransformer.dwl"/>
+        </dw:transform-message>
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CountryCurrency" doc:name="CountryInfoServic-countryCurrencyWeb Service Consumer"/>
+        <dw:transform-message doc:name="countryCurrencyResponseTransformer" >
+            <dw:input-payload doc:sample="sample_data\empty_1.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/countryCurrencyResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+    
+    
+     <flow name="pf-countryFlag">
+        
+        <dw:transform-message doc:name="countryFlagquestRequestTransformer">
+            <dw:input-payload doc:sample="sample_data\json.json"/>
+            <dw:set-payload resource="classpath:dwScripts/countryFlagquestRequestTransformer.dwl"/>
+        </dw:transform-message>
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CapitalCity" doc:name="CountryInfoService-ContryFalg-Web Service Consumer"/>
+        <dw:transform-message doc:name="countryFlagquestResponseTransformer">
+            <dw:input-payload doc:sample="sample_data\empty_2.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/countryFlagquestResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+    
+    
+  
+
+
+</mule>

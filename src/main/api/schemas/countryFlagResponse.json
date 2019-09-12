@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "CountryFlagResponse": {
+      "type": "object",
+      "properties": {
+        "CountryFlagResult": {
+          "type": "string",
+          "title": "The Countryflagresult Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "http://www.oorsprong.org/WebSamples.CountryInfo/Images/India.jpg"
+          ]
+        }
+      }
+    }
+  }
+}

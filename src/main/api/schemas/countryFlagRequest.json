@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "CountryFlag": {
+      "type": "object",
+      "properties": {
+        "sCountryISOCode": {
+          "type": "string",
+          "title": "The Scountryisocode Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "IN"
+          ]
+        }
+      }
+    }
+  }  
+}

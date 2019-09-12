@@ -1,0 +1,1761 @@
+<metadata__catalog__entry>
+  <version>5.2.0.0</version>
+  <types class="tree-map">
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CapitalCity</id>
+        <displayName>CapitalCity</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <org.mule.common.metadata.DefaultXmlMetaDataModel>
+        <dataType>XML</dataType>
+        <metaDataModelPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty/>
+            <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/>
+            <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <derivedStructure>false</derivedStructure>
+              <generatedStructure>false</generatedStructure>
+            </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+          </properties>
+        </metaDataModelPropertiesManager>
+        <fields>
+          <org.mule.common.metadata.DefaultMetaDataField>
+            <name>ns0:sCountryISOCode</name>
+            <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+              <dataType>STRING</dataType>
+              <metaDataModelPropertiesManager>
+                <properties>
+                  <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                    <typeQName>
+                      <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+                      <localPart>string</localPart>
+                      <prefix></prefix>
+                    </typeQName>
+                  </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                </properties>
+              </metaDataModelPropertiesManager>
+            </model>
+            <accessType>READ_WRITE</accessType>
+            <metaDataFieldPropertyManager>
+              <properties>
+                <org.mule.common.metadata.property.QNameMetaDataProperty>
+                  <name>
+                    <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                    <localPart>sCountryISOCode</localPart>
+                    <prefix>ns0</prefix>
+                  </name>
+                </org.mule.common.metadata.property.QNameMetaDataProperty>
+              </properties>
+            </metaDataFieldPropertyManager>
+          </org.mule.common.metadata.DefaultMetaDataField>
+        </fields>
+        <rootElement>
+          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+          <localPart>CapitalCity</localPart>
+          <prefix>ns0</prefix>
+        </rootElement>
+        <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+          <schemas>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.oorsprong.org/websamples.countryinfo&quot;&gt;&#xd;
+      &lt;xs:complexType name=&quot;tContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;Continent&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;CountryCodeAndNames&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCapitalCity&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sPhoneCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sContinentCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCountryFlag&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;Languages&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndName&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tLanguage&quot; nillable=&quot;true&quot; type=&quot;tns:tLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCurrency&quot; nillable=&quot;true&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndNameGroupedByContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryInfo&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByNameResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByCodeResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByNameResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByCodeResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CurrencyNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByCodeResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByNameResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResult&quot; type=&quot;tns:ArrayOftCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCity&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCityResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CapitalCityResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryCurrencyResult&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlag&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlagResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryFlagResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryIntPhoneCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfo&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoResult&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountries&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountriesResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoAllCountriesResult&quot; type=&quot;tns:ArrayOftCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCurrencyCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountriesUsingCurrencyResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByNameResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByCodeResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sLanguageName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+    &lt;/xs:schema&gt;</string>
+          </schemas>
+          <encoding>windows-1252</encoding>
+          <baseUri>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl</baseUri>
+        </schemas>
+        <namespaceManager>
+          <namespacePrefix class="tree-map">
+            <entry>
+              <string>http://www.oorsprong.org/websamples.countryinfo</string>
+              <string>ns0</string>
+            </entry>
+          </namespacePrefix>
+        </namespaceManager>
+      </org.mule.common.metadata.DefaultXmlMetaDataModel>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CapitalCityResponse</id>
+        <displayName>CapitalCityResponse</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <org.mule.common.metadata.DefaultXmlMetaDataModel>
+        <dataType>XML</dataType>
+        <metaDataModelPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty/>
+            <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/>
+            <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <derivedStructure>false</derivedStructure>
+              <generatedStructure>false</generatedStructure>
+            </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+          </properties>
+        </metaDataModelPropertiesManager>
+        <fields>
+          <org.mule.common.metadata.DefaultMetaDataField>
+            <name>ns0:CapitalCityResult</name>
+            <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+              <dataType>STRING</dataType>
+              <metaDataModelPropertiesManager>
+                <properties>
+                  <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                    <typeQName reference="../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                  </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                </properties>
+              </metaDataModelPropertiesManager>
+            </model>
+            <accessType>READ_WRITE</accessType>
+            <metaDataFieldPropertyManager>
+              <properties>
+                <org.mule.common.metadata.property.QNameMetaDataProperty>
+                  <name>
+                    <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                    <localPart>CapitalCityResult</localPart>
+                    <prefix>ns0</prefix>
+                  </name>
+                </org.mule.common.metadata.property.QNameMetaDataProperty>
+              </properties>
+            </metaDataFieldPropertyManager>
+          </org.mule.common.metadata.DefaultMetaDataField>
+        </fields>
+        <rootElement>
+          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+          <localPart>CapitalCityResponse</localPart>
+          <prefix>ns0</prefix>
+        </rootElement>
+        <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+          <schemas>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.oorsprong.org/websamples.countryinfo&quot;&gt;&#xd;
+      &lt;xs:complexType name=&quot;tContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;Continent&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;CountryCodeAndNames&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCapitalCity&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sPhoneCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sContinentCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCountryFlag&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;Languages&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndName&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tLanguage&quot; nillable=&quot;true&quot; type=&quot;tns:tLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCurrency&quot; nillable=&quot;true&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndNameGroupedByContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryInfo&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByNameResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByCodeResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByNameResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByCodeResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CurrencyNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByCodeResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByNameResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResult&quot; type=&quot;tns:ArrayOftCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCity&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCityResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CapitalCityResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryCurrencyResult&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlag&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlagResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryFlagResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryIntPhoneCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfo&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoResult&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountries&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountriesResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoAllCountriesResult&quot; type=&quot;tns:ArrayOftCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCurrencyCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountriesUsingCurrencyResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByNameResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByCodeResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sLanguageName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+    &lt;/xs:schema&gt;</string>
+          </schemas>
+          <encoding reference="../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/schemas/encoding"/>
+          <baseUri>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl</baseUri>
+        </schemas>
+        <namespaceManager>
+          <namespacePrefix class="tree-map">
+            <entry>
+              <string>http://www.oorsprong.org/websamples.countryinfo</string>
+              <string>ns0</string>
+            </entry>
+          </namespacePrefix>
+        </namespaceManager>
+      </org.mule.common.metadata.DefaultXmlMetaDataModel>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CountryCurrency</id>
+        <displayName>CountryCurrency</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <org.mule.common.metadata.DefaultXmlMetaDataModel>
+        <dataType>XML</dataType>
+        <metaDataModelPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty/>
+            <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/>
+            <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <derivedStructure>false</derivedStructure>
+              <generatedStructure>false</generatedStructure>
+            </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+          </properties>
+        </metaDataModelPropertiesManager>
+        <fields>
+          <org.mule.common.metadata.DefaultMetaDataField>
+            <name>ns0:sCountryISOCode</name>
+            <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+              <dataType>STRING</dataType>
+              <metaDataModelPropertiesManager>
+                <properties>
+                  <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                    <typeQName>
+                      <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+                      <localPart>string</localPart>
+                      <prefix></prefix>
+                    </typeQName>
+                  </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                </properties>
+              </metaDataModelPropertiesManager>
+            </model>
+            <accessType>READ_WRITE</accessType>
+            <metaDataFieldPropertyManager>
+              <properties>
+                <org.mule.common.metadata.property.QNameMetaDataProperty>
+                  <name>
+                    <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                    <localPart>sCountryISOCode</localPart>
+                    <prefix>ns0</prefix>
+                  </name>
+                </org.mule.common.metadata.property.QNameMetaDataProperty>
+              </properties>
+            </metaDataFieldPropertyManager>
+          </org.mule.common.metadata.DefaultMetaDataField>
+        </fields>
+        <rootElement>
+          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+          <localPart>CountryCurrency</localPart>
+          <prefix>ns0</prefix>
+        </rootElement>
+        <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+          <schemas>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.oorsprong.org/websamples.countryinfo&quot;&gt;&#xd;
+      &lt;xs:complexType name=&quot;tContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;Continent&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;CountryCodeAndNames&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCapitalCity&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sPhoneCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sContinentCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCountryFlag&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;Languages&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndName&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tLanguage&quot; nillable=&quot;true&quot; type=&quot;tns:tLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCurrency&quot; nillable=&quot;true&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndNameGroupedByContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryInfo&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByNameResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByCodeResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByNameResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByCodeResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CurrencyNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByCodeResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByNameResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResult&quot; type=&quot;tns:ArrayOftCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCity&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCityResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CapitalCityResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryCurrencyResult&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlag&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlagResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryFlagResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryIntPhoneCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfo&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoResult&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountries&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountriesResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoAllCountriesResult&quot; type=&quot;tns:ArrayOftCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCurrencyCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountriesUsingCurrencyResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByNameResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByCodeResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sLanguageName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+    &lt;/xs:schema&gt;</string>
+          </schemas>
+          <encoding reference="../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/schemas/encoding"/>
+          <baseUri>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl</baseUri>
+        </schemas>
+        <namespaceManager>
+          <namespacePrefix class="tree-map">
+            <entry>
+              <string>http://www.oorsprong.org/websamples.countryinfo</string>
+              <string>ns0</string>
+            </entry>
+          </namespacePrefix>
+        </namespaceManager>
+      </org.mule.common.metadata.DefaultXmlMetaDataModel>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CountryCurrencyResponse</id>
+        <displayName>CountryCurrencyResponse</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <org.mule.common.metadata.DefaultXmlMetaDataModel>
+        <dataType>XML</dataType>
+        <metaDataModelPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty/>
+            <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/>
+            <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <derivedStructure>false</derivedStructure>
+              <generatedStructure>false</generatedStructure>
+            </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+          </properties>
+        </metaDataModelPropertiesManager>
+        <fields>
+          <org.mule.common.metadata.DefaultMetaDataField>
+            <name>ns0:CountryCurrencyResult</name>
+            <model class="org.mule.common.metadata.DefaultXmlMetaDataModel">
+              <dataType>XML</dataType>
+              <metaDataModelPropertiesManager>
+                <properties>
+                  <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                    <typeQName>
+                      <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                      <localPart>tCurrency</localPart>
+                      <prefix></prefix>
+                    </typeQName>
+                  </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                </properties>
+              </metaDataModelPropertiesManager>
+              <fields>
+                <org.mule.common.metadata.DefaultMetaDataField>
+                  <name>ns0:sISOCode</name>
+                  <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+                    <dataType>STRING</dataType>
+                    <metaDataModelPropertiesManager>
+                      <properties>
+                        <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                          <typeQName reference="../../../../../../../../../../../../entry[3]/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                        </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                      </properties>
+                    </metaDataModelPropertiesManager>
+                  </model>
+                  <accessType>READ_WRITE</accessType>
+                  <metaDataFieldPropertyManager>
+                    <properties>
+                      <org.mule.common.metadata.property.QNameMetaDataProperty>
+                        <name>
+                          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                          <localPart>sISOCode</localPart>
+                          <prefix>ns0</prefix>
+                        </name>
+                      </org.mule.common.metadata.property.QNameMetaDataProperty>
+                    </properties>
+                  </metaDataFieldPropertyManager>
+                </org.mule.common.metadata.DefaultMetaDataField>
+                <org.mule.common.metadata.DefaultMetaDataField>
+                  <name>ns0:sName</name>
+                  <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+                    <dataType>STRING</dataType>
+                    <metaDataModelPropertiesManager>
+                      <properties>
+                        <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                          <typeQName reference="../../../../../../../../../../../../entry[3]/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                        </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                      </properties>
+                    </metaDataModelPropertiesManager>
+                  </model>
+                  <accessType>READ_WRITE</accessType>
+                  <metaDataFieldPropertyManager>
+                    <properties>
+                      <org.mule.common.metadata.property.QNameMetaDataProperty>
+                        <name>
+                          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                          <localPart>sName</localPart>
+                          <prefix>ns0</prefix>
+                        </name>
+                      </org.mule.common.metadata.property.QNameMetaDataProperty>
+                    </properties>
+                  </metaDataFieldPropertyManager>
+                </org.mule.common.metadata.DefaultMetaDataField>
+              </fields>
+              <rootElement>
+                <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                <localPart>CountryCurrencyResponse</localPart>
+                <prefix>ns0</prefix>
+              </rootElement>
+              <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+                <schemas>
+                  <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.oorsprong.org/websamples.countryinfo&quot;&gt;&#xd;
+      &lt;xs:complexType name=&quot;tContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;Continent&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;CountryCodeAndNames&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCapitalCity&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sPhoneCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sContinentCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sCountryFlag&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;Languages&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;tLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;xs:element name=&quot;sName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndName&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndName&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndName&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftLanguage&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tLanguage&quot; nillable=&quot;true&quot; type=&quot;tns:tLanguage&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCurrency&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCurrency&quot; nillable=&quot;true&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryCodeAndNameGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryCodeAndNameGroupedByContinent&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:complexType name=&quot;ArrayOftCountryInfo&quot;&gt;&#xd;
+        &lt;xs:sequence&gt;&#xd;
+          &lt;xs:element maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot; name=&quot;tCountryInfo&quot; nillable=&quot;true&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+        &lt;/xs:sequence&gt;&#xd;
+      &lt;/xs:complexType&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByNameResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfContinentsByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfContinentsByCodeResult&quot; type=&quot;tns:ArrayOftContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByNameResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCurrenciesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCurrenciesByCodeResult&quot; type=&quot;tns:ArrayOftCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCurrencyISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CurrencyNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CurrencyNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByCodeResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesByNameResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinent&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfCountryNamesGroupedByContinentResult&quot; type=&quot;tns:ArrayOftCountryCodeAndNameGroupedByContinent&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCity&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CapitalCityResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CapitalCityResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryCurrencyResult&quot; type=&quot;tns:tCurrency&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlag&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryFlagResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryFlagResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountryIntPhoneCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountryIntPhoneCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfo&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sCountryISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoResult&quot; type=&quot;tns:tCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountries&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;FullCountryInfoAllCountriesResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;FullCountryInfoAllCountriesResult&quot; type=&quot;tns:ArrayOftCountryInfo&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrency&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCurrencyCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;CountriesUsingCurrencyResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;CountriesUsingCurrencyResult&quot; type=&quot;tns:ArrayOftCountryCodeAndName&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByNameResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence/&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;ListOfLanguagesByCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;ListOfLanguagesByCodeResult&quot; type=&quot;tns:ArrayOftLanguage&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageName&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sISOCode&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageNameResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageNameResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCode&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;sLanguageName&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+      &lt;xs:element name=&quot;LanguageISOCodeResponse&quot;&gt;&#xd;
+        &lt;xs:complexType&gt;&#xd;
+          &lt;xs:sequence&gt;&#xd;
+            &lt;xs:element name=&quot;LanguageISOCodeResult&quot; type=&quot;xs:string&quot;/&gt;&#xd;
+          &lt;/xs:sequence&gt;&#xd;
+        &lt;/xs:complexType&gt;&#xd;
+      &lt;/xs:element&gt;&#xd;
+    &lt;/xs:schema&gt;</string>
+                </schemas>
+                <encoding reference="../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/schemas/encoding"/>
+                <baseUri>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl</baseUri>
+              </schemas>
+              <namespaceManager>
+                <namespacePrefix class="tree-map">
+                  <entry>
+                    <string>http://www.oorsprong.org/websamples.countryinfo</string>
+                    <string>ns0</string>
+                  </entry>
+                </namespacePrefix>
+              </namespaceManager>
+            </model>
+            <accessType>READ_WRITE</accessType>
+            <metaDataFieldPropertyManager>
+              <properties>
+                <org.mule.common.metadata.property.QNameMetaDataProperty>
+                  <name>
+                    <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+                    <localPart>CountryCurrencyResult</localPart>
+                    <prefix>ns0</prefix>
+                  </name>
+                </org.mule.common.metadata.property.QNameMetaDataProperty>
+              </properties>
+            </metaDataFieldPropertyManager>
+          </org.mule.common.metadata.DefaultMetaDataField>
+        </fields>
+        <rootElement>
+          <namespaceURI>http://www.oorsprong.org/websamples.countryinfo</namespaceURI>
+          <localPart>CountryCurrencyResponse</localPart>
+          <prefix>ns0</prefix>
+        </rootElement>
+        <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+          <schemas reference="../../fields/org.mule.common.metadata.DefaultMetaDataField/model/schemas/schemas"/>
+          <encoding reference="../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/schemas/encoding"/>
+          <baseUri>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl</baseUri>
+        </schemas>
+        <namespaceManager reference="../fields/org.mule.common.metadata.DefaultMetaDataField/model/namespaceManager"/>
+      </org.mule.common.metadata.DefaultXmlMetaDataModel>
+    </entry>
+  </types>
+  <connectorName>Web_Service_Consumer</connectorName>
+</metadata__catalog__entry>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd">
+    
+    <flow name="f-capital-city">
+        
+        <http:listener config-ref="HTTP_Listener_Configuration_1" path="/capital-city" allowedMethods="GET" doc:name="HTTP"/>
+        
+        <dw:transform-message doc:name="capitalCity RequestTransformer">
+            <dw:input-inbound-property doc:sample="sample_data\map_string_string_1.dwl" propertyName="http.uri.params"/>
+            <dw:set-payload resource="classpath:dwScripts/capitalCityRequestTransformer.dwl"/>
+        </dw:transform-message>
+        
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CapitalCity" doc:name="CountryInfoService-capital-city-Web Service Consumer"/>
+        <dw:transform-message doc:name="capitalCity ResponseTransformer" metadata:id="3fb2a6f2-f5e9-44a4-85c4-18af89e51efe">
+            <dw:input-payload doc:sample="sample_data\empty.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/capitalCityResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+    
+    
+    
+    
+        <flow name="f-countryCurrency">
+        <http:listener config-ref="HTTP_Listener_Configuration_1" path="/countryCurrency" allowedMethods="POST" doc:name="HTTP"/>
+        <dw:transform-message doc:name="countryCurrencyRequestTransformer">
+            <dw:input-inbound-property propertyName="http.query.params"/>
+            <dw:set-payload resource="classpath:dwScripts/countryCurrencyRequestTransformer.dwl"/>
+        </dw:transform-message>
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CountryCurrency" doc:name="CountryInfoServic-countryCurrencyWeb Service Consumer"/>
+        <dw:transform-message doc:name="countryCurrencyResponseTransformer" metadata:id="16a9d0fc-1cd1-44db-8bfe-ebcc5c7e6aeb">
+            <dw:input-payload doc:sample="sample_data\empty_1.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/countryCurrencyResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+    <flow name="f-countryFlag">
+        <http:listener config-ref="HTTP_Listener_Configuration_1" path="/countryFlag" allowedMethods="POST" doc:name="HTTP"/>
+        <dw:transform-message doc:name="countryFlagquestRequestTransformer">
+            <dw:input-payload doc:sample="sample_data\json.json"/>
+            <dw:set-payload resource="classpath:dwScripts/countryFlagquestRequestTransformer.dwl"/>
+        </dw:transform-message>
+        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="DB databse/EAI/REST/salesforce "/>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="CapitalCity" doc:name="CountryInfoService-ContryFalg-Web Service Consumer"/>
+        <dw:transform-message doc:name="countryFlagquestResponseTransformer" metadata:id="c8f3ee69-cd99-4351-bb54-d689e248bb06">
+            <dw:input-payload doc:sample="sample_data\empty_2.xml"/>
+            <dw:set-payload resource="classpath:dwScripts/countryFlagquestResponseTransformer.dwl"/>
+        </dw:transform-message>
+    </flow>
+    
+    
+    
+    
+</mule>

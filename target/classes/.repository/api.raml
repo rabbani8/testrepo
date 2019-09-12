@@ -1,0 +1,74 @@
+#%RAML 0.8
+baseUri: https://mocksvc.mulesoft.com/mocks/838cacbc-f21a-4926-91e7-9f70e219f602
+title: CountryInfoService
+version: 1.0
+
+schemas:
+- capitalCityResponseSchema: !include schemas/capitalCityResponse.json
+- countryFlagRequestSchema: !include schemas/countryFlagRequest.json
+- countryFlagResponseSchema: !include schemas/countryFlagResponse.json
+- countryCurrencyResponseSchema: !include schemas/countryCurrencyResponse.json
+- errorJSONResponse: !include schemas/errors/errors.json
+
+traits:
+  - tracking-header: !include traits/tracking-header.yaml
+  - query-params: !include traits/query-params.yaml
+      
+resourceTypes:
+  - readOnlyMember: !include resourceTypes/readOnlyCollection-item.yaml
+  - readOnlyMember1: !include resourceTypes/readOnlyCollection-item1.yaml
+
+
+
+
+/system:
+  /capital-city/{sCountryISOCode}:
+    uriParameters: 
+      sCountryISOCode: 
+        type: string
+        minLength: 1
+        maxLength: 3
+    get:
+      responses: 
+        200:
+          body:
+            application/json:
+              schema: capitalCityResponseSchema
+              example: !include examples/capitalCityResponse.json
+  /countryCurrency:
+      is : [query-params]
+      type: {
+        readOnlyMember1: {
+          collectionItem-res-schema: countryCurrencyResponseSchema,
+          collectionItem-res-example: !include examples/countryCurrencyResponse.json,
+          errors-schema: errorJSONResponse,
+          errors-example: !include examples/errors/errors.json
+        }
+        }
+  /countryFlag:
+    type: {
+      readOnlyMember: {
+        collectionItem-req-schema: countryFlagRequestSchema,
+        collectionItem-req-example: !include examples/countryFlagRequest.json,
+        collectionItem-res-schema: countryFlagResponseSchema,
+        collectionItem-res-example: !include examples/countryFlagResponse.json,
+        errors-schema: errorJSONResponse,
+        errors-example: !include examples/errors/errors.json
+      }
+      }
+
+       
+        
+      
+
+   
+        
+       
+       
+        
+        
+        
+      
+    
+    
+  

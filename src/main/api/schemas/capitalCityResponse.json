@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "CapitalCityResponse": {
+      "type": "object",
+      "properties": {
+        "CapitalCityResult": {
+          "type": "string",
+          "title": "The Capitalcityresult Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "New Delhi"
+          ]
+        }
+      }
+    }
+  }
+}

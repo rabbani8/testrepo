@@ -1,0 +1,13 @@
+{
+  "code": "400",
+  "errors": [
+    {
+      "code": "701",
+      "description": "db_no_data_found_exception-Client.701:256691466507967000 is not found in NMS"
+    },
+    {
+      "code": "Client.701",
+      "description": "Data not found"
+    }
+  ]
+}

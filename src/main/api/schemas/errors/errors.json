@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema for errors collection",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+         }
+        },
+        "required": [
+          "code",
+          "description"
+        ]
+      }
+    }
+  },
+  "required": [
+    "errors"
+  ]
+}

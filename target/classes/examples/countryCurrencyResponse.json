@@ -1,0 +1,8 @@
+{
+  "CountryCurrencyResponse": {
+      "CountryCurrencyResult": {
+      "sISOCode": "INR",
+      "sName": "Rupees"
+    }
+  }
+}
