@@ -7,7 +7,9 @@ stages {
     
     stage('cloning Test') { 
       steps {
-          git branch: 'feature/m04-121-patch1', 
+          //git branch: 'feature/m04-121-patch1', 
+          
+          git branch: "${ENV_BRANCH}"
           credentialsId: 'github_jenkins',
           url: ' https://github.com/rabbani8/testrepo.git'
       }
