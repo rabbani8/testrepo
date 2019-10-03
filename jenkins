@@ -1,0 +1,31 @@
+pipeline {
+    
+  agent any
+
+
+stages {
+    
+    stage('cloning Test') { 
+      steps {
+          git branch: 'feature/m04-121-patch1', 
+          credentialsId: 'github_jenkins',
+          url: ' https://github.com/rabbani8/testrepo.git'
+      }
+    }
+    
+    
+    //stage('Unit Test') { 
+    //  steps {
+       // sh 'mvn clean test'
+     // }
+    //}
+    
+    stage('Deploy Standalone') { 
+      steps {
+        // for mac use sh commands
+        //sh 'mvn deploy -P standalone -Dmule.home=C:\\Users\\rabbanis\\Downloads\\mule-enterprise-standalone-3.9.3-hf1'
+        bat 'mvn deploy -P standalone -Dmule.home=C:\\Users\\rabbanis\\Downloads\\mule-enterprise-standalone-3.9.3-hf1'
+      }
+    }
+ }
+}
